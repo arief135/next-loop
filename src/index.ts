@@ -1,9 +1,9 @@
-import {ApplicationConfig, LoopbackGettingStartedApplication} from './application';
+import {ApplicationConfig, NextLoopApplication} from './application';
 
 export * from './application';
 
 export async function main(options: ApplicationConfig = {}) {
-  const app = new LoopbackGettingStartedApplication(options);
+  const app = new NextLoopApplication(options);
   await app.boot();
   await app.start();
 
