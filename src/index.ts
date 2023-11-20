@@ -1,4 +1,4 @@
-import {ApplicationConfig, NextLoopApplication} from './application';
+import { ApplicationConfig, NextLoopApplication } from './application';
 
 export * from './application';
 

@@ -1,16 +1,16 @@
-import {BootMixin} from '@loopback/boot';
-import {ApplicationConfig} from '@loopback/core';
-import {RepositoryMixin} from '@loopback/repository';
-import {RestApplication} from '@loopback/rest';
+import { BootMixin } from '@loopback/boot';
+import { ApplicationConfig } from '@loopback/core';
+import { RepositoryMixin } from '@loopback/repository';
+import { RestApplication } from '@loopback/rest';
 import {
   RestExplorerBindings,
   RestExplorerComponent,
 } from '@loopback/rest-explorer';
-import {ServiceMixin} from '@loopback/service-proxy';
+import { ServiceMixin } from '@loopback/service-proxy';
 import path from 'path';
-import {MySequence} from './sequence';
+import { MySequence } from './sequence';
 
-export {ApplicationConfig};
+export { ApplicationConfig };
 
 export class NextLoopApplication extends BootMixin(
   ServiceMixin(RepositoryMixin(RestApplication)),
@@ -35,8 +35,8 @@ export class NextLoopApplication extends BootMixin(
     this.bootOptions = {
       controllers: {
         // Customize ControllerBooter Conventions here
-        dirs: ['controllers'],
-        extensions: ['.controller.js'],
+        dirs: [ 'controllers' ],
+        extensions: [ '.controller.js' ],
         nested: true,
       },
     };

@@ -1,5 +1,5 @@
-import {ApplicationConfig} from '@loopback/core';
-import {NextLoopApplication} from './application';
+import { ApplicationConfig } from '@loopback/core';
+import { NextLoopApplication } from './application';
 
 /**
  * Export the OpenAPI spec from the application
@@ -11,7 +11,7 @@ async function exportOpenApiSpec(): Promise<void> {
       host: process.env.HOST ?? 'localhost',
     },
   };
-  const outFile = process.argv[2] ?? '';
+  const outFile = process.argv[ 2 ] ?? '';
   const app = new NextLoopApplication(config);
   await app.boot();
   await app.exportOpenApiSpec(outFile);
